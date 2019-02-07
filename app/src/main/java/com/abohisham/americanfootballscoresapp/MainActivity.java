@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/////////////// this is my first app in github /////////////
+
 public class MainActivity extends AppCompatActivity {
 
     int scoreTA = 0;
