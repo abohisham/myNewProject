@@ -1,154 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/af_bg"
-    android:gravity="center"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="32dp"
         android:background="#B4B4B4"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="2dp">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#fff"
-            android:gravity="center"
             android:orientation="vertical"
             android:padding="8dp">
 
             <TextView
-                android:id="@+id/teamAscore_text_view"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#AC0000"
-                android:textSize="40sp" />
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="16dp"
+                android:text="Team A"
+                android:textColor="#616161"
+                android:textSize="24sp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/teamAscore_text_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Team A"
-                android:textColor="#000"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="24sp"
+                android:text="0"
+                android:textColor="#AC0000"
+                android:textSize="56sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#03A9F4"
+                android:layout_marginTop="8dp"
                 android:onClick="teamAtouchdown"
-                android:padding="15dp"
                 android:text="Touch down"
                 android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#03A9F4"
+                android:layout_marginTop="8dp"
                 android:onClick="teamAfieldgoal"
-                android:padding="15dp"
                 android:text="Field Goal"
                 android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#03A9F4"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:onClick="teamAsafety"
-                android:padding="15dp"
                 android:text="Safety"
                 android:textSize="20sp" />
 
         </LinearLayout>
 
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#535353" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_weight="1"
             android:background="#fff"
-            android:gravity="center"
             android:orientation="vertical"
             android:padding="8dp">
 
             <TextView
-                android:id="@+id/teamBscore_text_view"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#AC0000"
-                android:textSize="40sp" />
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="16dp"
+                android:text="Team B"
+                android:textSize="24sp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/teamBscore_text_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Team B"
-                android:textColor="#000"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="24sp"
+                android:text="0"
+                android:textColor="#AC0000"
+                android:textSize="56sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#03A9F4"
+                android:layout_marginTop="8dp"
                 android:onClick="teamBtouchdown"
-                android:padding="15dp"
                 android:text="Touch down"
                 android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#03A9F4"
+                android:layout_marginTop="8dp"
                 android:onClick="teamBfieldgoal"
-                android:padding="15dp"
                 android:text="Field Goal"
                 android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#03A9F4"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:onClick="teamBsafety"
-                android:padding="15dp"
                 android:text="Safety"
                 android:textSize="20sp" />
-
 
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_rset"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:background="#474747"
         android:onClick="Reset"
         android:text="Reset"
         android:textColor="#fff"
         android:textSize="25sp" />
 
-</LinearLayout>
+</RelativeLayout>
